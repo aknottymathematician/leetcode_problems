@@ -1,10 +1,13 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hashnums = {}
-        for i, num in enumerate(nums):
-            pot_num = target-nums[i]
-            if pot_num in hashnums:
-                return [i, hashnums[pot_num]]
+        hashSum = {}
+        
+        for i, n in enumerate(nums):
+            pot_sum = (target-nums[i])
+            
+            if pot_sum in hashSum:
+                return [i, hashSum[pot_sum]]
+            
             else:
-                hashnums[num]=i
+                hashSum[n] = i
         return []
